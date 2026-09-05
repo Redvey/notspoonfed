@@ -1,33 +1,42 @@
-from ollama import chat
+from ai_service import generate_learning_material
 
 
-def ask_ai(prompt: str) -> str:
-    response = chat(
-        model="qwen3:4b",
-        messages=[
-            {
-                "role": "system",
-                "content": (
-                    "You are an AI tutor for computer science students. "
-                    "Give accurate, concise explanations and focus on "
-                    "conceptual understanding."
-                ),
-            },
-            {
-                "role": "user",
-                "content": prompt,
-            },
-        ],
-    )
+topic = input("Enter a CS topic: ")
 
-    return response.message.content
+print("\nGenerating structured learning material...\n")
+
+material = generate_learning_material(topic)
 
 
-if __name__ == "__main__":
-    prompt = input("Ask the local AI: ")
+print("TOPIC")
+print(material.topic)
 
-    print("\nGenerating...\n")
 
-    answer = ask_ai(prompt)
+print("\nSUMMARY")
+print(material.summary)
 
-    print(answer)
+
+print("\nKEY POINTS")
+
+for point in material.key_points:
+    print("-", point)
+
+
+print("\nQUESTIONS")
+
+for index, question in enumerate(material.questions, start=1):
+
+    print(f"\nQuestion {index}")
+    print(question.question)
+
+    print("Answer:")
+    print(question.answer)
+
+    print("Explanation:")
+    print(question.explanation)
+
+    print("Difficulty:")
+    print(question.difficulty)
+
+    print("Concept:")
+    print(question.concept)
