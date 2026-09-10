@@ -1,4 +1,5 @@
 from ai_service import generate_from_notes
+from storage import save_learning_material
 
 
 print("Paste your lecture notes.")
@@ -24,6 +25,7 @@ else:
     print("\nGenerating material from your notes...\n")
 
     material = generate_from_notes(notes)
+    file_path = save_learning_material(material)
 
     print("TOPIC")
     print(material.topic)
@@ -54,3 +56,5 @@ else:
 
         print("Concept:")
         print(question.concept)
+        
+print(f"\nSaved to: {file_path}")
