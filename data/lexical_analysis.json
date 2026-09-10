@@ -1,0 +1,34 @@
+{
+    "topic": "Lexical Analysis",
+    "summary": "Lexical analysis is the process where a lexical analyzer processes source code character by character, grouping characters into meaningful units (lexemes), and producing tokens (represented as <token-name, attribute-value>). It interacts with the symbol table and reports lexical errors when invalid tokens form.",
+    "key_points": [
+        "Lexical analyzer reads source program as a character stream",
+        "Groups characters into lexemes",
+        "Produces tokens represented as <token-name, attribute-value>",
+        "Interacts with symbol table",
+        "Lexical errors occur when characters cannot form valid tokens"
+    ],
+    "questions": [
+        {
+            "question": "What is the primary function of a lexical analyzer when processing a source program?",
+            "answer": "To read the source program as a stream of characters and group them into lexemes",
+            "explanation": "The lexical analyzer processes input character by character to form meaningful units called lexemes.",
+            "difficulty": "easy",
+            "concept": "Lexical analyzer input processing"
+        },
+        {
+            "question": "How is a token represented in lexical analysis?",
+            "answer": "<token-name, attribute-value>",
+            "explanation": "Tokens are structured units containing a token type (e.g., 'INT') and associated attributes (e.g., numeric value).",
+            "difficulty": "medium",
+            "concept": "Token representation"
+        },
+        {
+            "question": "What happens when input characters cannot form a valid token during lexical analysis?",
+            "answer": "Lexical errors occur",
+            "explanation": "The lexical analyzer detects invalid character combinations that do not constitute valid tokens (e.g., malformed identifiers).",
+            "difficulty": "hard",
+            "concept": "Lexical error handling"
+        }
+    ]
+}

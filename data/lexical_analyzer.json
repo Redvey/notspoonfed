@@ -1,0 +1,32 @@
+{
+    "topic": "Lexical Analyzer",
+    "summary": "The lexical analyzer is the first phase of a compiler that processes source code to produce a sequence of tokens.",
+    "key_points": [
+        "It is the initial phase of the compiler design process",
+        "It converts source code into meaningful tokens (e.g., identifiers, keywords, operators, literals)",
+        "It handles whitespace, comments, and other non-token elements by skipping them"
+    ],
+    "questions": [
+        {
+            "question": "What is the primary purpose of the lexical analyzer in a compiler?",
+            "answer": "To convert the source code into a sequence of tokens",
+            "explanation": "The lexical analyzer breaks the source code into tokens, which are the smallest meaningful units for further compilation phases.",
+            "difficulty": "easy",
+            "concept": "Purpose of lexical analyzer"
+        },
+        {
+            "question": "Which of the following is not typically considered a token by a lexical analyzer?",
+            "answer": "Comment",
+            "explanation": "Lexical analyzers skip comments and whitespace; tokens are meaningful units like identifiers, keywords, and operators.",
+            "difficulty": "easy",
+            "concept": "Token classification"
+        },
+        {
+            "question": "What is the role of the lexical analyzer in the overall compilation process?",
+            "answer": "It processes the source code to generate tokens for the next phase (syntax analysis)",
+            "explanation": "After token generation, the syntax analyzer uses these tokens to build parse trees and check grammatical structure.",
+            "difficulty": "medium",
+            "concept": "Compiler phases"
+        }
+    ]
+}

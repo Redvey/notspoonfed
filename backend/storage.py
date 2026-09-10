@@ -11,7 +11,7 @@ def save_learning_material(material: LearningMaterial):
 
     DATA_DIR.mkdir(exist_ok=True)
 
-    filename = material.topic.lower().replace(" ", "_") + ".json"
+    filename = material.topic.lower().replace(" ", "_" ).replace(":", "_" ) + ".json"
 
     file_path = DATA_DIR / filename
 
@@ -24,4 +24,3 @@ def save_learning_material(material: LearningMaterial):
         )
 
     return file_path
-    
